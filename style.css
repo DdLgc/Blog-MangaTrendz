@@ -1,0 +1,11 @@
+body {
+  background-image: url("./assets/img/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.logo {
+  background-image: url("./assets/img/Logo.png");
+}
