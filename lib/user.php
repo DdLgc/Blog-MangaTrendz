@@ -8,7 +8,7 @@ function verifyUserLoginPassword(PDO $pdo, string $email, string $password):arra
     $user = $query->fetch(PDO::FETCH_ASSOC);
 
     if ($user && password_verify($password, $user["password"])) { 
-        return true;
+        return $user;
     } else {
         return false;
     }
