@@ -1,9 +1,9 @@
 <?php
 require_once __DIR__ . "/lib/config.php";
-require_once __DIR__ . "/lib/session.php";
 require_once __DIR__ . "/lib/pdo.php";
 require_once __DIR__ . "/lib/user.php";
 require_once __DIR__ . "/lib/menu.php";
+
 require_once __DIR__ . "/templates/header.php";
 
 $errors = [];
@@ -11,8 +11,7 @@ $errors = [];
 if (isset($_POST["loginUser"])) {
     $email = $_POST["email"];
     $password = $_POST["password"];
-    var_dump($_POST);
-    
+
     $user = verifyUserLoginPassword($pdo, $email, $password);
     if ($user) {
         session_regenerate_id(true);
@@ -22,7 +21,6 @@ if (isset($_POST["loginUser"])) {
         } elseif ($user["role"] === "admin") {
             header("location: admin/index.php");
         }
-
     } else {
         $errors[] = "Email ou  mot de passe incorrect";
     }
@@ -34,9 +32,9 @@ if (isset($_POST["loginUser"])) {
 <h1>Login</h1>
 
 <?php foreach ($errors as $error) { ?>
-<div class="alert alert-danger">
-    <?=$error; ?>
-</div>
+    <div class="alert alert-danger">
+        <?= $error; ?>
+    </div>
 <?php } ?>
 
 <form method="post">
