@@ -14,7 +14,7 @@ if (isset($_POST["loginUser"])) {
 
     $user = verifyUserLoginPassword($pdo, $email, $password);
     if ($user) {
-        session_regenerate_id(true);
+        session_start();
         $_SESSION["user"] = $user;
         if ($user["role"] === "user") {
             header("location: index.php");
@@ -27,7 +27,6 @@ if (isset($_POST["loginUser"])) {
 }
 
 ?>
-
 
 <h1>Login</h1>
 
