@@ -8,6 +8,8 @@ session_set_cookie_params([
   'httponly' => true //--évite les cookie manipulable en js
 ]);
 
+session_start();
+
 function adminOnly()
 {
   if (!isset($_SESSION['user'])) {
@@ -18,4 +20,3 @@ function adminOnly()
   }
 }
 
-session_start();
