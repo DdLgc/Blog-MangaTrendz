@@ -8,7 +8,6 @@ session_set_cookie_params([
   'httponly' => true //--évite les cookie manipulable en js
 ]);
 
-session_start();
 
 function adminOnly()
 {
