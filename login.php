@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . "/lib/start_session.php";
 require_once __DIR__ . "/lib/session.php";
 require_once __DIR__ . "/lib/config.php";
 require_once __DIR__ . "/lib/pdo.php";
@@ -13,13 +14,14 @@ if (isset($_POST["loginUser"])) {
     $password = $_POST["password"];
 
     $user = verifyUserLoginPassword($pdo, $email, $password);
+
     if ($user) {
-        session_start();
         $_SESSION["user"] = $user;
+
         if ($user["role"] === "user") {
             header("location: index.php");
         } elseif ($user["role"] === "admin") {
-            header("location: admin/index.php");
+            header("location:admin/index.php");
         }
     } else {
         $errors[] = "Email ou  mot de passe incorrect";

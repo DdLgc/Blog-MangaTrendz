@@ -14,3 +14,5 @@
         </div>
     </div>
 </div>
+
+<!-- amodifier pour les images meme tailles !!  -->
