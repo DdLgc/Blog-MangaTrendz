@@ -10,3 +10,18 @@ body {
 .logo {
   background-image: url("./assets/img/Logo.png");
 }
+.about-section {
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color:rgb(0, 255, 51);
+
+}
+.about-section h1 {
+  font-size: 32px;
+  color:rgb(0, 255, 51);
+}
+.about-section p {
+  margin: 20px 0;
+}
