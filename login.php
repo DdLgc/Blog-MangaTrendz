@@ -16,7 +16,7 @@ if (isset($_POST["loginUser"])) {
     $user = verifyUserLoginPassword($pdo, $email, $password);
 
     if ($user) {
-        $_SESSION["user"] = $user;
+        $_SESSION["user"] = $user['id'];
 
         if ($user["role"] === "user") {
             header("location: index.php");
