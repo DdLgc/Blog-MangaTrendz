@@ -16,7 +16,34 @@ require_once __DIR__ . "/templates/header.php";
     <p>
         Au cours des dernières années, l'industrie du manga et de l'anime a connu une croissance exponentielle, aussi bien au Japon que sur la scène internationale. En 2020, le marché du manga a généré plus de 600 milliards de yens au Japon, marquant une augmentation de 23% par rapport à l'année précédente. Parallèlement, les plateformes de streaming telles que Netflix et Crunchyroll ont élargi leur catalogue d'anime, rendant ces œuvres accessibles à un public mondial et diversifié. Ces développements témoignent de l'attrait croissant pour ce genre.
     </p>
+    <div>
     <canvas id="mangaChart" width="400" height="400"></canvas>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var ctx = document.getElementById('mangaChart').getContext('2d');
+    var mangaChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['2016', '2017', '2018', '2019', '2020', '2021'],
+            datasets: [{
+                label: 'Ventes de Manga (en millions)',
+                data: [60, 70, 75, 80, 85, 90],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+});
+</script>
 
     <h2>Histoire du Dessin Japonais</h2>
     <p>
