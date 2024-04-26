@@ -26,13 +26,38 @@ document.addEventListener('DOMContentLoaded', function() {
         type: 'line',
         data: {
             labels: ['2016', '2017', '2018', '2019', '2020', '2021'],
-            datasets: [{
-                label: 'Ventes de Manga (en millions)',
-                data: [60, 70, 75, 80, 85, 90],
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1
-            }]
+            datasets: [
+                {
+                    label: 'Ventes de Manga (en millions)',
+                    data: [60, 70, 75, 80, 85, 90],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 2
+                },
+                {
+                    label: 'Ventes d\'Anime (en millions)',
+                    data: [50, 55, 65, 70, 80, 85],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 2
+                },
+                {
+                    label: 'Ventes de Merchandising (en millions)',
+                    data: [40, 50, 55, 60, 70, 80],
+                    borderColor: 'rgba(255, 206, 86, 1)',
+                    borderWidth: 2
+                },
+                {
+                    label: 'Nouvelles Séries Lancées',
+                    data: [10, 12, 15, 18, 20, 22],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2
+                },
+                {
+                    label: 'Audience en Streaming (en millions)',
+                    data: [200, 220, 240, 260, 300, 350],
+                    borderColor: 'rgba(255, 159, 64, 1)',
+                    borderWidth: 2
+                }
+            ]
         },
         options: {
             scales: {
@@ -60,5 +85,4 @@ document.addEventListener('DOMContentLoaded', function() {
         Chez <strong>MangaTrendz</strong>, nous célébrons cette riche histoire et son évolution constante. Rejoignez-nous pour explorer les profondeurs créatives du manga et de l'anime, et pour partager votre passion avec une communauté de fans tout aussi dévoués.
     </p>
 </div>
-<script src="./mangaChart.js"></script>
 <?php require_once __DIR__ ."/templates/footer.php"; ?>
