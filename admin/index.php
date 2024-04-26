@@ -4,8 +4,9 @@ require_once __DIR__ . "/templates/header.php";
 ?>
 
 <h1>Admin Dashboard</h1>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos sint laboriosam dicta eum eveniet autem qui? Modi, id
-    saepe dolores obcaecati optio vel quibusdam dicta! Distinctio eius impedit aliquam numquam.</p>
+<button><a href="">Creer</a></button>
+<button><a href="">Edit</a></button>
+<button><a href="">Supprimer</a></button>
 
 <?php
     require_once __DIR__ . "/templates/footer.php";

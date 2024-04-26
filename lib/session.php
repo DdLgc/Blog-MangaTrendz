@@ -15,6 +15,7 @@ function adminOnly()
   } elseif ($_SESSION['user']['role'] != 'admin') {
 
     header('location: ../index.php');
+    exit();
   }
 }
 

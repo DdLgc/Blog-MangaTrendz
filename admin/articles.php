@@ -1,9 +1,11 @@
 <?php
 require_once __DIR__ . "/lib/start_session.php";
-require_once __DIR__ . "/lib/session_start.php";
-require_once __DIR__ . "/templates/header.php";
+require_once __DIR__ . "/lib/session.php";
+adminOnly();
+
 require_once __DIR__ . "/../lib/pdo.php";
 require_once __DIR__ . "/../lib/article.php";
+require_once __DIR__ . "/templates/header.php";
 
 if (isset($_GET["page"])) {
     $page = (int)$_GET["page"];
@@ -32,8 +34,8 @@ $totalPages = ceil($totalArticles / _ADMIN_ITEM_PER_PAGE_);
     <tbody>
         <?php foreach ($articles as $article) { ?>
             <tr>
-                <th scope="row"><?=$article["id"] ?></th>
-                <td><?=$article["title"] ?></td>
+                <th scope="row"><?= $article["id"] ?></th>
+                <td><?= $article["title"] ?></td>
                 <td>Modifier | Supprimer</td>
             </tr>
         <?php } ?>
@@ -41,14 +43,17 @@ $totalPages = ceil($totalArticles / _ADMIN_ITEM_PER_PAGE_);
 </table>
 
 <?php if ($totalPages > 1) { ?>
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <?php for ($i =1; $i <= $totalPages;$i++) { ?>
-        <li class="page-item <?php if ($i === $page) { echo "active"; } ?>"><a class="page-link" href="?page=<?=$i;?>"><?=$i;?></a></li>
-    <?php } ?>
-  </ul>
-</nav>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                <li class="page-item <?php if ($i === $page) {
+                                            echo "active";
+                                        } ?>"><a class="page-link" href="?page=<?= $i; ?>"><?= $i; ?></a></li>
+            <?php } ?>
+        </ul>
+    </nav>
 <?php } ?>
 
 <?php
 require_once __DIR__ . "/templates/footer.php";
+?>
