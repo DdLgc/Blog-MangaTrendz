@@ -19,9 +19,9 @@ if (isset($_POST["loginUser"])) {
         $_SESSION["user"] = $user['id'];
 
         if ($user["role"] === "user") {
-            header("location: index.php");
+            header("Location: index.php");
         } elseif ($user["role"] === "admin") {
-            header("location:admin/index.php");
+            header("Location:admin/index.php");
         }
     } else {
         $errors[] = "Email ou  mot de passe incorrect";
@@ -34,7 +34,7 @@ if (isset($_POST["loginUser"])) {
 
 <?php foreach ($errors as $error) { ?>
     <div class="alert alert-danger">
-        <?= $error; ?>
+        <?= htmlspecialchars($error); ?>
     </div>
 <?php } ?>
 

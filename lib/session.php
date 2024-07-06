@@ -12,10 +12,11 @@ function adminOnly()
 {
   if (!isset($_SESSION['user'])) {
     header('location: ../login.php');
+    exit();
   } elseif ($_SESSION['user']['role'] != 'admin') {
 
     header('location: ../index.php');
     exit();
   }
 }
-
+?>
