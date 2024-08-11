@@ -1,8 +1,12 @@
 <?php
+
 require_once __DIR__ . '/../lib/start_session.php';
 require_once __DIR__ . '/../lib/session.php';
+require_once __DIR__ . "templates/header.php";
+session_start();
+var_dump($_SESSION);
+exit();
 adminOnly();
-require_once __DIR__ . "/templates/header.php";
 ?>
 
 <h1>Admin Dashboard</h1>

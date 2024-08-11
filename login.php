@@ -18,6 +18,9 @@ if (isset($_POST["loginUser"])) {
     if ($user) {
         $_SESSION["user"] = $user['id'];
 
+        var_dump($_SESSION);
+exit();
+
         if ($user["role"] === "user") {
             header("Location: index.php");
         } elseif ($user["role"] === "admin") {
