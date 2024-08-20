@@ -1,7 +1,5 @@
 <?php
 session_start();
-file_put_contents('logout.log', 'Session ID avant destruction: ' . session_id() . "\n", FILE_APPEND);
-
 $_SESSION = array();
 
 if (ini_get("session.use_cookies")) {
@@ -13,7 +11,5 @@ if (ini_get("session.use_cookies")) {
 }
 
 session_destroy();
-file_put_contents('logout.log', 'Session détruite. Session ID après destruction: ' . session_id() . "\n", FILE_APPEND);
 
-header('Location: login.php');
-exit();
+echo "Session détruite";

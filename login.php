@@ -7,6 +7,8 @@ require_once __DIR__ . "/lib/user.php";
 require_once __DIR__ . "/lib/menu.php";
 require_once __DIR__ . "/templates/header.php";
 
+
+
 $errors = [];
 
 if (isset($_POST["loginUser"])) {
@@ -18,7 +20,6 @@ if (isset($_POST["loginUser"])) {
     if ($user) {
         $_SESSION["user"] = $user['id'];
 
-        var_dump($_SESSION);
 exit();
 
         if ($user["role"] === "user") {
@@ -27,7 +28,7 @@ exit();
             header("Location:admin/index.php");
         }
     } else {
-        $errors[] = "Email ou  mot de passe incorrect";
+        $errors[] = "Email ou mot de passe incorrect";
     }
 }
 
