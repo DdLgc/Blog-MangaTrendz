@@ -6,7 +6,9 @@ require_once __DIR__ . "/lib/pdo.php";
 require_once __DIR__ . "/lib/user.php";
 require_once __DIR__ . "/lib/menu.php";
 require_once __DIR__ . "/templates/header.php";
-
+var_dump($_SESSION);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 
 $errors = [];
@@ -18,14 +20,14 @@ if (isset($_POST["loginUser"])) {
     $user = verifyUserLoginPassword($pdo, $email, $password);
 
     if ($user) {
-        $_SESSION["user"] = $user['id'];
+        $_SESSION['user'] = $user['id'];
+        $_SESSION['role '] = $user['role'];
 
-exit();
 
         if ($user["role"] === "user") {
             header("Location: index.php");
         } elseif ($user["role"] === "admin") {
-            header("Location:admin/index.php");
+            header("Location: admin/index.php");
         }
     } else {
         $errors[] = "Email ou mot de passe incorrect";
