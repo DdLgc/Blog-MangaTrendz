@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once __DIR__ . '/../../lib/pdo.php';
+
+var_dump($_SESSION);
 var_dump($_POST);
 
 if (!isset($_SESSION['user']) || $_SESSION['role'] !== 'admin') {
@@ -23,21 +25,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (empty($errors)) {
-        // Insertion dans la base de données
+
         $stmt = $pdo->prepare('INSERT INTO articles (title, content, created_at) VALUES (?, ?, NOW())');
         $stmt->execute([$title, $content]);
         $success = true;
+    } else {
+        $errors[] = 'Erreur lors de l\'insertion dans la base de données.';
     }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Créer un Article</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/style.css">
 </head>
+
 <body>
     <h1>Créer un Nouvel Article</h1>
 
@@ -53,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         <?php endif; ?>
 
-        <form action="create.php" method="post">
+        <Form action="" method="post">
             <div>
                 <label for="title">Titre</label>
                 <input type="text" name="title" id="title" required>
@@ -65,7 +71,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div>
                 <button type="submit">Créer</button>
             </div>
-        </form>
+        </Form>
     <?php endif; ?>
 </body>
+
 </html>
