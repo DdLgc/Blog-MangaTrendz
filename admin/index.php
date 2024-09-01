@@ -1,7 +1,6 @@
 <?php
 session_start();
 require_once __DIR__ . '/../lib/pdo.php';
-var_dump($_SESSION);
 
 if (!isset($_SESSION['user'])) {
     header('Location: ../index.php');
@@ -23,9 +22,9 @@ require_once __DIR__ . '/../templates/header.php';
 ?>
 
 <h1>Admin Dashboard</h1>
-<button><a href="create.php">Créer</a></button>
-<button><a href="edit.php">Modifier</a></button>
-<button><a href="delete.php">Supprimer</a></button>
+<button><a href="crud/create.php">Créer</a></button>
+<button><a href="crud/edit.php">Modifier</a></button>
+<button><a href="crud/delete.php">Supprimer</a></button>
 
 <?php
     require_once __DIR__ . "/templates/footer.php";

@@ -6,7 +6,7 @@ require_once __DIR__ . "/lib/pdo.php";
 require_once __DIR__ . "/lib/user.php";
 require_once __DIR__ . "/lib/menu.php";
 require_once __DIR__ . "/templates/header.php";
-var_dump($_SESSION);
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
