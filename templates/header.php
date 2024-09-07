@@ -23,7 +23,7 @@ $currentPage = basename($_SERVER["SCRIPT_NAME"]);
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             <div class="col-md-3 mb-2 mb-md-0">
                 <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-                    <img src="assets/img/Logo.png" alt="logo MangaTrendz" width="150">
+                    <img src="assets/img/logo.jpg" alt="logo MangaTrendz" width="150">
                 </a>
             </div>
 

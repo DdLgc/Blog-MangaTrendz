@@ -24,10 +24,7 @@ $articles = getArticles($pdo, _HOME_ARTICLES_LIMIT_);
 </section>
 
 <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-    <!-- <div class="col-10 col-sm-8 col-lg-6">
-        <img src="assets/img/Logo.png" class="d-block mx-lg-auto img-fluid" alt="Logo" width="700" height="500" loading="lazy">
-    </div> -->
-    <div class="col-lg-6">
+    <div class="col-lg-12">
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Bienvenue sur MangaTrendz</h1>
         <p class="lead">Découvrez les dernières actualités du monde des mangas et des animes !</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
@@ -42,7 +39,7 @@ $articles = getArticles($pdo, _HOME_ARTICLES_LIMIT_);
         if (count($articles) > 0) {
             $firstArticle = array_shift($articles);
             echo '<div class="col-12 col-md-6 featured-article">';
-            echo '<img src="uploads/' . htmlspecialchars($firstArticle['image']) . '" alt="' . htmlspecialchars($firstArticle['title']) . '" class="img-fluid">';
+            echo '<img src="assets/uploads/articles/' . htmlspecialchars($firstArticle['image']) . '" alt="' . htmlspecialchars($firstArticle['title']) . '" class="img-fluid">';
             echo '<h2>' . htmlspecialchars($firstArticle['title']) . '</h2>';
             echo '<p>' . htmlspecialchars(substr($firstArticle['content'], 0, 150)) . '...</p>';
             echo '<a href="article.php?id=' . $firstArticle['id'] . '" class="btn btn-secondary">Lire plus</a>';
@@ -51,7 +48,7 @@ $articles = getArticles($pdo, _HOME_ARTICLES_LIMIT_);
 
         foreach ($articles as $article) {
             echo '<div class="col-6 col-md-3 article-card">';
-            echo '<img src="uploads/' . htmlspecialchars($article['image']) . '" alt="' . htmlspecialchars($article['title']) . '" class="img-fluid">';
+            echo '<img src="/assets/uploads/articles/' . htmlspecialchars($article['image']) . '" alt="' . htmlspecialchars($article['title']) . '" class="img-fluid">';
             echo '<h3>' . htmlspecialchars($article['title']) . '</h3>';
             echo '<p>' . htmlspecialchars(substr($article['content'], 0, 100)) . '...</p>';
             echo '<a href="article.php?id=' . $article['id'] . '" class="btn btn-secondary">Lire plus</a>';
