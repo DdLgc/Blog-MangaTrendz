@@ -4,6 +4,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: 'Sawarabi Mincho',sans-serif;
+  
+  
+}
+.sawarabi-mincho-regular {
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .container {
@@ -140,7 +148,27 @@ body {
   75%, 85% { transform: translateY(-224px); }      
   90%, 100% { transform: translateY(-266px); }     
 }
-
+h1 {
+  font-family: "Kolker Brush", cursive;
+  font-weight: 600;
+  font-style: bold; 
+  font-size: 3rem; 
+  font-weight: bold;
+  color: white; 
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  background: linear-gradient(90deg, #00ccff, white); 
+  background-clip: padding-box; ;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  letter-spacing: 2px; 
+  padding: 10px;
+  text-transform: uppercase; 
+  text-shadow: 0px 0px 10px rgba(0, 0, 255, 0.8); 
+  border: 2px solid #00ccff; 
+  box-shadow: 0 0 15px #00ccff; 
+}
 
 .featured-article, .article-card {
   background-color: #fff;
