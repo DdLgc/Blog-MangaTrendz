@@ -205,7 +205,6 @@ h1 {
   background-color: #555;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .featured-article {
       flex: 1 1 100%;
@@ -220,4 +219,36 @@ h1 {
   .article-card {
       flex: 1 1 100%;
   }
+}
+footer {
+  color: #999; 
+  padding: 40px 0;
+}
+
+
+.footer-link {
+  color: #ccc; 
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #00ccff; 
+}
+
+.footer-logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #ccc; 
+  margin: 0;
+}
+
+footer .text-muted {
+  color: #999; 
 }
