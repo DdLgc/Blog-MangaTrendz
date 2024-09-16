@@ -4,9 +4,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'Sawarabi Mincho',sans-serif;
-  
-  
+  font-family: "Sawarabi Mincho", sans-serif;
 }
 .sawarabi-mincho-regular {
   font-family: "Sawarabi Mincho", serif;
@@ -31,20 +29,20 @@ body {
   animation: blink 1.5s infinite;
   border-radius: 50%;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
 
-.blinking-logo::before, 
+.blinking-logo::before,
 .blinking-logo::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 50%; 
-  border: 3px solid transparent; 
-  z-index: -1; 
+  border-radius: 50%;
+  border: 3px solid transparent;
+  z-index: -1;
   animation: border-blink 3s infinite;
 }
 
@@ -54,53 +52,63 @@ body {
 }
 
 .blinking-logo::after {
-  border-color: blue; 
-  box-shadow: 0 0 10px blue; 
+  border-color: blue;
+  box-shadow: 0 0 10px blue;
 }
 
-
 @keyframes blink {
-  0% { filter: brightness(100%); }     
-  50% { filter: brightness(150%); }    
-  100% { filter: brightness(100%); }   
+  0% {
+    filter: brightness(100%);
+  }
+  50% {
+    filter: brightness(150%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
 }
 
 @keyframes border-blink {
-  0%, 100% { border-color: white; }   
-  50% { border-color: blue; }         
+  0%,
+  100% {
+    border-color: white;
+  }
+  50% {
+    border-color: blue;
+  }
 }
 .nav-link {
-  color: #ffffff; 
+  color: #ffffff;
   font-size: 16px;
   padding: 8px 15px;
   position: relative;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #00ccff; 
-  transform: scale(1.05); 
+  color: #00ccff;
+  transform: scale(1.05);
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #00ccff; 
+  background-color: #00ccff;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
 
 .nav-link:hover::after {
-  transform: scaleX(1); 
+  transform: scaleX(1);
 }
 
 .nav-link.active {
-  color: #FFFFFF; 
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -127,7 +135,7 @@ body {
 
 .news-ticker {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   animation: scroll-pause 30s infinite;
 }
 
@@ -140,37 +148,59 @@ body {
 }
 
 @keyframes scroll-pause {
-  0%, 10% { transform: translateY(-2px); }            
-  15%, 25% { transform: translateY(-46px); }       
-  30%, 40% { transform: translateY(-90px); }      
-  45%, 55% { transform: translateY(-136px); }      
-  60%, 70% { transform: translateY(-177px); }    
-  75%, 85% { transform: translateY(-224px); }      
-  90%, 100% { transform: translateY(-266px); }     
+  0%,
+  10% {
+    transform: translateY(-2px);
+  }
+  15%,
+  25% {
+    transform: translateY(-46px);
+  }
+  30%,
+  40% {
+    transform: translateY(-90px);
+  }
+  45%,
+  55% {
+    transform: translateY(-136px);
+  }
+  60%,
+  70% {
+    transform: translateY(-177px);
+  }
+  75%,
+  85% {
+    transform: translateY(-224px);
+  }
+  90%,
+  100% {
+    transform: translateY(-266px);
+  }
 }
 h1 {
   font-family: "Kolker Brush", cursive;
   font-weight: 600;
-  font-style: bold; 
-  font-size: 3rem; 
+  font-style: bold;
+  font-size: 3rem;
   font-weight: bold;
-  color: white; 
+  color: white;
   position: relative;
   display: inline-block;
   text-align: center;
-  background: linear-gradient(90deg, #00ccff, white); 
-  background-clip: padding-box; ;
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent; 
-  letter-spacing: 2px; 
+  background: linear-gradient(90deg, #00ccff, white);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
   padding: 10px;
-  text-transform: uppercase; 
-  text-shadow: 0px 0px 10px rgba(0, 0, 255, 0.8); 
-  border: 2px solid #00ccff; 
-  box-shadow: 0 0 15px #00ccff; 
+  text-transform: uppercase;
+  text-shadow: 0px 0px 10px rgba(0, 0, 255, 0.8);
+  border: 2px solid #00ccff;
+  box-shadow: 0 0 15px #00ccff;
 }
 
-.featured-article, .article-card {
+.featured-article,
+.article-card {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -180,13 +210,15 @@ h1 {
   margin-bottom: 20px;
 }
 
-.featured-article img, .article-card img {
+.featured-article img,
+.article-card img {
   max-width: 100%;
   border-radius: 5px;
   margin-bottom: 10px;
 }
 
-.featured-article h2, .article-card h3 {
+.featured-article h2,
+.article-card h3 {
   color: #333;
 }
 
@@ -207,48 +239,85 @@ h1 {
 
 @media (max-width: 768px) {
   .featured-article {
-      flex: 1 1 100%;
+    flex: 1 1 100%;
   }
 
   .article-card {
-      flex: 1 1 calc(50% - 20px);
+    flex: 1 1 calc(50% - 20px);
   }
 }
 
 @media (max-width: 480px) {
   .article-card {
-      flex: 1 1 100%;
+    flex: 1 1 100%;
   }
 }
 footer {
-  color: #999; 
+  color: #999;
   padding: 40px 0;
 }
 
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .nav,
+.footer-logo-container,
+footer .text-end {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
 
 .footer-link {
-  color: #ccc; 
+  color: #ffffff;
   text-decoration: none;
   font-size: 14px;
-  transition: color 0.3s;
+  letter-spacing: 3.5px;
+  font-weight: 500;
 }
 
 .footer-link:hover {
-  color: #00ccff; 
+  text-decoration: none;
+  color: #00ccff;
 }
 
 .footer-logo {
-  display: block;
-  margin: 0 auto;
-  max-width: 150px;
+  max-width: 120px;
 }
 
 footer p {
   font-size: 14px;
-  color: #ccc; 
+  color: #ccc;
   margin: 0;
 }
 
-footer .text-muted {
-  color: #999; 
+.footer-text {
+  color: #ffffff;
+  letter-spacing: 3.5px;
+}
+
+.copyright {
+  color: #fff;
+}
+.copyright:hover {
+  transition: all 0.8s ease-in-out;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .footer-logo-container {
+    display: none;
+  }
+
+  footer .container {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  footer .text-end,
+  footer .text-start {
+    text-align: center;
+  }
 }

@@ -1,31 +1,31 @@
 </main>
 
 <footer class="py-4 my-4 border-top">
-    <div class="container d-flex justify-content-between">
-        <ul class="nav flex-column">
+    <div class="container d-flex justify-content-between align-items-center">
+        <ul class="nav flex-column text-start">
             <li class="nav-item">
-                <a href="contact.php" class="nav-link px-0 py-1 footer-link">Nous contacter</a>
+                <a href="contact.php" class=" px-0 py-1 footer-link">Nous contacter</a>
+            </li>
+            <li class="nav-item py-2">
+                <a href="mentions-legales.php" class=" px-0  footer-link">Mentions légales</a>
             </li>
             <li class="nav-item">
-                <a href="mentions-legales.php" class="nav-link px-0 py-1 footer-link">Mentions légales</a>
-            </li>
-            <li class="nav-item">
-                <a href="politique-confidentialite.php" class="nav-link px-0 py-1 footer-link">Politique de confidentialité</a>
+                <a href="politique-confidentialite.php" class=" px-0 py-1 footer-link">Politique de confidentialité</a>
             </li>
         </ul>
 
-        <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex justify-content-center footer-logo-container">
             <a href="/">
-                <img src="assets/img/logo.jpg" alt="Logo MangaTrendz" class="footer-logo" width="150">
+                <img src="assets/img/logo.jpg" alt="Logo MangaTrendz" class="footer-logo logo blinking-logo" width="150">
             </a>
         </div>
 
-        <div class="d-flex flex-column align-items-end">
-            <p class="text-muted">Bienvenue sur MangaTrendz, votre source d'actualités sur les mangas et les animés. Restez à jour avec nous !</p>
+        <div class="text-end">
+            <p class="footer-text">Bienvenue sur MangaTrendz, votre source d'actualités sur les mangas et les animés. Restez à jour !</p>
         </div>
     </div>
 
-    <p class="text-center text-muted">© <?= date("Y") ?> DdLgc</p>
+    <p class="text-center copyright py-1">© <?= date("Y") ?> DdLgc</p>
 </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
