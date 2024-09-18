@@ -4,7 +4,7 @@
     <div class="container d-flex justify-content-between align-items-center">
         <ul class="nav flex-column text-start">
             <li class="nav-item">
-                <a href="contact.php" class=" px-0 py-1 footer-link">Nous contacter</a>
+                <a href="./contact.php" class=" px-0 py-1 footer-link">Nous contacter</a>
             </li>
             <li class="nav-item py-2">
                 <a href="mentions-legales.php" class=" px-0  footer-link">Mentions légales</a>
