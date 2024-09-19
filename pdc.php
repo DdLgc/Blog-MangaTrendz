@@ -4,7 +4,7 @@ require_once __DIR__ . "/templates/header.php";
 
 
 <div class="container mt-5">
-    <h2 class="text-center">Politique de Confidentialité</h2>
+    <h1 class="text-center">Politique de Confidentialité</h1>
     
     <p>Chez <strong>MangaTrendz</strong>, nous prenons très au sérieux la confidentialité de vos données personnelles. Cette politique de confidentialité a pour objectif de vous informer sur la manière dont nous collectons, utilisons et protégeons vos informations personnelles.</p>
 
