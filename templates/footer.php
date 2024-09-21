@@ -7,10 +7,10 @@
                 <a href="./contact.php" class=" px-0 py-1 footer-link">Nous contacter</a>
             </li>
             <li class="nav-item py-2">
-                <a href="mentions-legales.php" class=" px-0  footer-link">Mentions légales</a>
+                <a href="legal_information.php" class=" px-0  footer-link">Mentions légales</a>
             </li>
             <li class="nav-item">
-                <a href="pdc.php" class="px-0 py-1 footer-link">Politique de confidentialité</a>
+                <a href="pdc.php" class="px-0 py-1 footer-link">Politique de confidentialité</a> 
             </li>
         </ul>
 
