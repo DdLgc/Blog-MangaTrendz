@@ -119,13 +119,14 @@ body {
 }
 
 .news-banner {
-  background-color: #40c4ff;
+  background-color: #ff4081;
   overflow: hidden;
   position: relative;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 5px;
 }
 
 .news-container {
@@ -181,20 +182,20 @@ body {
 }
 
 h1 {
-  font-family: "Bangers", sans-serif; /* Police percutante et dynamique */
+  font-family: "Bangers", sans-serif; 
   font-weight: 600;
   font-size: 3rem; 
   text-transform: uppercase; 
   text-align: center; 
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   letter-spacing: 3px; 
   padding: 10px;
   background: linear-gradient(90deg, #ff4081, #40c4ff); 
   background-clip: text;
   -webkit-text-fill-color: transparent; 
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);  
-  margin-bottom: 1rem;
-  border-bottom: 3px solid #ff4081; 
 }
 
 
@@ -220,11 +221,31 @@ h1 {
 .article-card h3 {
   color: #333;
 }
+.button, button {
+  font-family: "Sawarabi Mincho", sans-serif; 
+  font-weight: 600;
+  font-size: .9rem;
+  color: #ffffff; 
+  background-color: #40c4ff; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-transform: uppercase; 
+  letter-spacing: 1px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.button:hover, button:hover {
+  background-color: #ff4081; 
+  color: #ffffff; 
+}
 
 .btn-secondary {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #333;
+  background-color:#ff4081;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -233,7 +254,7 @@ h1 {
 }
 
 .btn-secondary:hover {
-  background-color: #555;
+  background-color: #40c4ff;
 }
 
 @media (max-width: 768px) {
@@ -251,8 +272,8 @@ h1 {
     flex: 1 1 100%;
   }
 }
+
 footer {
-  color: #999;
   padding: 40px 0;
 }
 
@@ -280,7 +301,7 @@ footer .text-end {
 
 .footer-link:hover {
   text-decoration: none;
-  color: #00ccff;
+  color: #40c4ff;
 }
 
 .footer-logo {
@@ -289,7 +310,7 @@ footer .text-end {
 
 footer p {
   font-size: 14px;
-  color: #ccc;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -299,6 +320,7 @@ footer p {
 }
 
 .copyright {
+  margin-top: 30px;
   color: #fff;
 }
 .copyright:hover {

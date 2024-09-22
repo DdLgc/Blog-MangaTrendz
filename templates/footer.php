@@ -1,6 +1,6 @@
 </main>
 
-<footer class="py-4 my-4 border-top">
+<footer class="pt-2 mt-4 border-top">
     <div class="container d-flex justify-content-between align-items-center">
         <ul class="nav flex-column text-start">
             <li class="nav-item">
@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <p class="text-center copyright py-1">© <?= date("Y") ?> DdLgc</p>
+    <p class="text-center copyright pt-1">© <?= date("Y") ?> DdLgc</p>
 </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
