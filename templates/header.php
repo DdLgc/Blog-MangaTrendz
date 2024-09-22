@@ -45,9 +45,9 @@ $currentPage = basename($_SERVER["SCRIPT_NAME"]);
 
       <div class="col-md-3 text-end">
         <?php if (isset($_SESSION["user"])) { ?>
-          <a href="logout.php" class="btn btn-primary">Déconnexion</a>
+          <a href="logout.php" class="button btn btn-primary">Déconnexion</a>
         <?php } else { ?>
-          <a href="login.php" class="btn btn-outline-primary me-2">Connexion</a>
+          <a href="login.php" class="button btn btn-outline-primary me-2">Connexion</a>
         <?php } ?>
       </div>
     </header>
