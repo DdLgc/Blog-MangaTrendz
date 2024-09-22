@@ -25,7 +25,7 @@ $articles = getArticles($pdo, _HOME_ARTICLES_LIMIT_);
 
 <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-lg-12">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Bienvenue sur MangaTrendz</h1>
+        <h1 class=" fw-bold  mb-3">Bienvenue sur MangaTrendz</h1>
         <p class="lead">Découvrez les dernières actualités du monde des mangas et des animes !</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             <a href="actualites.php" class="btn btn-primary btn-lg px-4 me-md-2">Voir toutes les actualités</a>

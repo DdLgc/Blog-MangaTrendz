@@ -17,6 +17,9 @@ $currentPage = basename($_SERVER["SCRIPT_NAME"]);
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+  <!-- a remplacer -->
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Sofadi+One&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 

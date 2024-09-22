@@ -78,33 +78,35 @@ body {
   }
 }
 .nav-link {
-  color: #ffffff;
-  font-size: 16px;
-  padding: 8px 15px;
+  font-family: "Bangers", sans-serif; 
+  font-weight: 400;
+  letter-spacing: 1.6px;
+  font-size: 1.8rem;
+  color: white; 
   position: relative;
   text-transform: uppercase;
-  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  transition: color 0.3s ease; 
 }
 
 .nav-link:hover {
-  color: #00ccff;
+  color: #40c4ff;
   transform: scale(1.05);
 }
 
 .nav-link::after {
-  content: "";
+  content: '';
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  left: 50%;
+  bottom: -1.5px;
+  width: 0;
   height: 2px;
-  background-color: #00ccff;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  background: linear-gradient(90deg, #40c4ff, #ff4081); 
+  transition: width 0.4s ease, left 0.4s ease; 
 }
-
 .nav-link:hover::after {
-  transform: scaleX(1);
+  width: 100%; 
+  left: 0;
 }
 
 .nav-link.active {
@@ -113,11 +115,11 @@ body {
 }
 
 .lead {
-  color: rgb(0, 255, 51);
+  color: #ffffff;
 }
 
 .news-banner {
-  background-color: #4784ff;
+  background-color: #40c4ff;
   overflow: hidden;
   position: relative;
   height: 40px;
@@ -177,27 +179,24 @@ body {
     transform: translateY(-266px);
   }
 }
+
 h1 {
-  font-family: "Kolker Brush", cursive;
+  font-family: "Bangers", sans-serif; /* Police percutante et dynamique */
   font-weight: 600;
-  font-style: bold;
-  font-size: 3rem;
-  font-weight: bold;
-  color: white;
-  position: relative;
+  font-size: 3rem; 
+  text-transform: uppercase; 
+  text-align: center; 
   display: inline-block;
-  text-align: center;
-  background: linear-gradient(90deg, #00ccff, white);
-  background-clip: padding-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: 2px;
+  letter-spacing: 3px; 
   padding: 10px;
-  text-transform: uppercase;
-  text-shadow: 0px 0px 10px rgba(0, 0, 255, 0.8);
-  border: 2px solid #00ccff;
-  box-shadow: 0 0 15px #00ccff;
+  background: linear-gradient(90deg, #ff4081, #40c4ff); 
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);  
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #ff4081; 
 }
+
 
 .featured-article,
 .article-card {
@@ -320,7 +319,4 @@ footer p {
   footer .text-start {
     text-align: center;
   }
-}
-.precueil {
-color: #ffffff;
 }
