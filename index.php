@@ -8,6 +8,12 @@ require_once __DIR__ . "/lib/menu.php";
 require_once __DIR__ . "/templates/header.php";
 
 $articles = getArticles($pdo, _HOME_ARTICLES_LIMIT_);
+
+if (count($articles) > 0) {
+    $firstArticle = array_shift($articles);
+    $firstArticle['class'] = 'featured-article';
+    array_unshift($articles, $firstArticle);
+}
 ?>
 
 <section class="news-banner">
@@ -38,24 +44,22 @@ $articles = getArticles($pdo, _HOME_ARTICLES_LIMIT_);
         <?php
         if (count($articles) > 0) {
             $firstArticle = array_shift($articles);
-            ?>
-
+        ?>
             <div class="col-12 col-md-6 featured-article">
                 <img src="assets/uploads/articles/<?= htmlspecialchars($firstArticle['image']) ?>" alt="<?= htmlspecialchars($firstArticle['title']) ?>" class="img-fluid">
                 <h2><?= htmlspecialchars($firstArticle['title']) ?></h2>
                 <p><?= htmlspecialchars(substr($firstArticle['content'], 0, 150)) ?>...</p>
-                <a href="article.php?id=<?= $firstArticle['id'] ?>" class="button btn btn-secondary">Lire plus</a>
+                <a href="actualite.php?id=<?= $firstArticle['id'] ?>" class="button btn btn-secondary">Lire plus</a>
             </div>
-
 
             <div class="col-12 col-md-6 d-flex flex-column">
                 <?php foreach ($articles as $key => $article): ?>
-                    <?php if ($key < 2):  ?>
+                    <?php if ($key < 2): ?>
                         <div class="article-small mb-4">
                             <img src="/assets/uploads/articles/<?= htmlspecialchars($article['image']) ?>" alt="<?= htmlspecialchars($article['title']) ?>" class="img-fluid">
                             <h3><?= htmlspecialchars($article['title']) ?></h3>
                             <p><?= htmlspecialchars(substr($article['content'], 0, 100)) ?>...</p>
-                            <a href="article.php?id=<?= $article['id'] ?>" class="button btn btn-secondary">Lire plus</a>
+                            <a href="actualite.php?id=<?= $article['id'] ?>" class="button btn btn-secondary">Lire plus</a>
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>

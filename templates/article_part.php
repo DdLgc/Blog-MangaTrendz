@@ -1,4 +1,5 @@
 <?php
+// test visuel 
 $imagePath = getArticleImage($article["image"]);
 ?>
 

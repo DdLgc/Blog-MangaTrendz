@@ -21,7 +21,6 @@ body {
 }
 
 .logo {
-  /* background-image: url("/assets/img/Logo.png"); */
   border-radius: 50%;
   border: 0.5px solid blue;
   border: 0.8px solid white;
@@ -98,14 +97,16 @@ body {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   bottom: -1.5px;
   width: 0;
   height: 2px;
   background: linear-gradient(90deg, #40c4ff, #ff4081);
-  transition: width 0.4s ease, left 0.4s ease;
+  transition:
+    width 0.4s ease,
+    left 0.4s ease;
 }
 
 .nav-link:hover::after {
@@ -202,11 +203,9 @@ h1 {
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
-
 .featured-article-container {
   margin-top: 40px;
 }
-
 
 .featured-article {
   display: flex;
@@ -218,14 +217,21 @@ h1 {
 .featured-article img {
   width: 100%;
   height: 300px;
-  object-fit: cover; 
+  object-fit: cover;
 }
 .featured-article p {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .featured-article .button {
-  margin-top: auto; 
+  margin-top: auto;
+}
+.featured-article p {
+  flex-grow: 1;
+}
+
+.featured-article .button {
+  margin-top: auto;
 }
 
 .article-small {
@@ -240,8 +246,8 @@ h1 {
 
 .article-small img {
   width: 100%;
-  height: 150px; 
-  object-fit: cover; 
+  height: 150px;
+  object-fit: cover;
 }
 
 .featured-article,
@@ -262,35 +268,39 @@ h1 {
   margin-bottom: 10px;
 }
 
-.featured-article ,
-.article-small ,
+.featured-article,
+.article-small,
 .article-card h3 {
   color: #333;
 }
 
-.button, button {
+.button,
+button {
   font-family: "Sawarabi Mincho", sans-serif;
   font-weight: 600;
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #ffffff;
   background-color: #40c4ff;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.button:hover, button:hover {
+.button:hover,
+button:hover {
   background-color: #ff4081;
   color: #ffffff;
 }
 
 .button {
-  margin-top: auto; 
+  margin-top: auto;
 }
 
 .btn-secondary {
@@ -393,7 +403,8 @@ footer p {
 
 /* Peut etre inutile car déjà  @media max-width 768px */
 @media (max-width: 768px) {
-  .article-small, .featured-article {
+  .article-small,
+  .featured-article {
     flex: 1 1 100%;
   }
 }
