@@ -8,4 +8,9 @@ $mainMenu = [
     "contact.php" => ["menu_title" => "Nous contacter", "head_title" => "Nous contacter", "meta_description" => "Nous contacter", "exclude" => true],
     "legal_information.php" => ["menu_title" => "Mentions Légales", "head_title" => "Mentions Légales", "meta_description" => "Mentions Légales", "exclude" => true],
     "pdc.php" => ["menu_title" => "Politique de confidentialité", "head_title" => "Politique de confidentialité", "meta_description" => "Politique de confidentialité", "exclude" => true],
+    "404.php" => [
+        "menu_title" => "404",
+        "head_title" => "Page introuvable - MangaTrendz",
+        "meta_description" => "La page demandée n'existe pas."
+    ],
 ];
