@@ -1,0 +1,14 @@
+# Active la réécriture d'URL
+RewriteEngine On
+
+# Page 404 personnalisée
+ErrorDocument 404 /404.php
+
+# Empêche l'accès aux fichiers sensibles
+<FilesMatch "\.(env|ini|log|conf)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Empêche l'affichage du listing de dossiers
+Options -Indexes

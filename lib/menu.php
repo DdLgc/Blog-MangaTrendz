@@ -11,6 +11,6 @@ $mainMenu = [
     "404.php" => [
         "menu_title" => "404",
         "head_title" => "Page introuvable - MangaTrendz",
-        "meta_description" => "La page demandée n'existe pas."
+        "meta_description" => "La page demandée n'existe pas.", "exclude" => true
     ],
 ];

@@ -20,7 +20,8 @@ $currentPage = basename($_SERVER["SCRIPT_NAME"]);
   <!-- a remplacer -->
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Sofadi+One&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="<?= _BASE_URL_; ?>assets/style.css">
+
 </head>
 
 <body>
