@@ -7,10 +7,15 @@ require_once __DIR__ . "/lib/article.php";
 require_once __DIR__ . "/lib/menu.php";
 
 $id = filter_input(INPUT_GET, "id", FILTER_VALIDATE_INT);
-$article = $id ? getArticleById($pdo, $id) : false;
+
+if (!$id) {
+    header("Location: 404.php");
+    exit;
+}
+
+$article = getArticleById($pdo, $id);
 
 if (!$article) {
-    http_response_code(404);
     header("Location: 404.php");
     exit;
 }
@@ -23,14 +28,18 @@ $mainMenu["actualite.php"] = [
     "exclude" => true
 ];
 
-require_once __DIR__ . "/templates/header.php"; ?>
+require_once __DIR__ . "/templates/header.php";
+?>
 
 <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
-        <img src="<?= $imagePath ?>" class="d-block mx-lg-auto img-fluid" alt="<?= htmlentities($article["title"]) ?>" width="700" height="500" loading="lazy">
+        <img src="<?= $imagePath ?>"
+            class="d-block mx-lg-auto img-fluid"
+            alt="<?= htmlentities($article["title"]) ?>"
+            loading="lazy">
     </div>
     <div class="col-lg-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><?= htmlentities($article["title"]) ?></h1>
+        <h1 class="display-5 fw-bold mb-3"><?= htmlentities($article["title"]) ?></h1>
         <p class="lead"><?= nl2br(htmlentities($article["content"])) ?></p>
     </div>
 </div>
