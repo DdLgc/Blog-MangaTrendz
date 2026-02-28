@@ -202,6 +202,17 @@ h1 {
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
+h2, h3 {
+  font-family: "Bangers", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+  padding: 10px;
+}
 
 .featured-article-container {
   margin-top: 40px;
@@ -276,7 +287,7 @@ h1 {
 
 .button,
 button {
-  font-family: "Sawarabi Mincho", sans-serif;
+  /* font-family: "Sawarabi Mincho", sans-serif; */
   font-weight: 600;
   font-size: 0.9rem;
   color: #ffffff;
