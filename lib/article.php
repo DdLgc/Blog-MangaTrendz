@@ -1,8 +1,12 @@
 <?php
 
-function getArticles(PDO $pdo, int $limit = null, int $page = 1): array
+function getArticles(PDO $pdo, int $limit = null, int $page = 1, ?int $categoryId = null): array
 {
-    $sql = "SELECT * FROM articles ORDER BY created_at DESC";
+    $sql = "SELECT * FROM articles";
+    if ($categoryId) {
+        $sql .= " WHERE category_id = :category_id";
+    }
+    $sql .= " ORDER BY created_at DESC";
 
     if ($limit !== null) {
         $offset = ($page - 1) * $limit;
@@ -10,6 +14,10 @@ function getArticles(PDO $pdo, int $limit = null, int $page = 1): array
     }
 
     $query = $pdo->prepare($sql);
+
+    if ($categoryId) {
+        $query->bindValue(':category_id', $categoryId, PDO::PARAM_INT);
+    }
 
     if ($limit !== null) {
         $query->bindValue(':offset', $offset, PDO::PARAM_INT);
@@ -21,16 +29,23 @@ function getArticles(PDO $pdo, int $limit = null, int $page = 1): array
 }
 
 
-function getTotalArticle(PDO $pdo,):int
+function getTotalArticle(PDO $pdo, ?int $categoryId = null): int
 {
-    $sql = "SELECT COUNT(*) as total FROM articles;";
+    $sql = "SELECT COUNT(*) as total FROM articles";
+    if ($categoryId) {
+        $sql .= " WHERE category_id = :category_id";
+    }
 
-    $query  = $pdo->prepare($sql);
+    $query = $pdo->prepare($sql);
+
+    if ($categoryId) {
+        $query->bindValue(':category_id', $categoryId, PDO::PARAM_INT);
+    }
 
     $query->execute();
     $result = $query->fetch(PDO::FETCH_ASSOC);
 
-    return $result["total"];
+    return (int) $result['total'];
 }
 
 
