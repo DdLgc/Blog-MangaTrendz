@@ -1,31 +1,49 @@
 <?php
-session_start();
+require_once __DIR__ . '/../lib/start_session.php';
+require_once __DIR__ . '/../lib/session.php';
+require_once __DIR__ . '/../lib/config.php';
 require_once __DIR__ . '/../lib/pdo.php';
+require_once __DIR__ . '/../lib/menu.php';
 
-if (!isset($_SESSION['user'])) {
-    header('Location: ../index.php');
+if (!isset($_SESSION['user']) || !isset($_SESSION['role'])) {
+    header('Location: ' . _BASE_URL_ . 'index.php');
+    exit();
+}
+
+if ($_SESSION['role'] !== 'admin') {
+    header('Location: ' . _BASE_URL_ . 'index.php');
     exit();
 }
 
 $stmt = $pdo->prepare('SELECT * FROM users WHERE id = ?');
 $stmt->execute([$_SESSION['user']]);
-$user = $stmt->fetch();
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if ($user === false || $user['role'] !== 'admin') {
-
-header('Location: ../index.php');
-exit();
-
+if (!$user) {
+    header('Location: ' . _BASE_URL_ . 'index.php');
+    exit();
 }
+
+$pageKey = "admin/index.php";
+$logoHref = _BASE_URL_ . "admin/index.php";
+
+$mainMenu[$pageKey] = [
+    "head_title" => "Dashboard Admin - MangaTrendz",
+    "meta_description" => "Tableau de bord administrateur MangaTrendz",
+    "exclude" => true
+];
 
 require_once __DIR__ . '/../templates/header.php';
 ?>
 
 <h1>Admin Dashboard</h1>
-<button><a href="crud/create.php">Créer</a></button>
-<button><a href="crud/edit.php">Modifier</a></button>
-<button><a href="crud/delete.php">Supprimer</a></button>
 
-<?php
-    require_once __DIR__ . "/templates/footer.php";
-?>
+<div class="container my-4">
+    <div class="d-flex flex-wrap gap-3 justify-content-center">
+        <a href="<?= _BASE_URL_; ?>admin/crud/create.php" class="btn btn-primary">Créer un article</a>
+        <a href="<?= _BASE_URL_; ?>admin/crud/edit.php" class="btn btn-secondary">Modifier un article</a>
+        <a href="<?= _BASE_URL_; ?>admin/crud/delete.php" class="btn btn-danger">Supprimer un article</a>
+    </div>
+</div>
+
+<?php require_once __DIR__ . '/../templates/footer.php'; ?>

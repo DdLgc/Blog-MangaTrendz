@@ -21,7 +21,7 @@ if (isset($_POST["loginUser"])) {
 
     if ($user) {
         $_SESSION['user'] = $user['id'];
-        $_SESSION['role '] = $user['role'];
+        $_SESSION['role'] = $user['role'];
 
 
         if ($user["role"] === "user") {
