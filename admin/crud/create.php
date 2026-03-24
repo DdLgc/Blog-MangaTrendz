@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = trim($_POST['title'] ?? '');
     $content = trim($_POST['content'] ?? '');
     $categoryId = isset($_POST['category_id']) ? (int) $_POST['category_id'] : 0;
-    $imageName = null;
+    $imageName = "default-article.jpg";
 
     if ($title === '') {
         $errors[] = 'Le titre est requis.';

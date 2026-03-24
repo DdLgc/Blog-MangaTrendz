@@ -1,5 +1,8 @@
 body {
   background-image: url("./img/hero.png");
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,6 +15,9 @@ body {
   font-family: "Sawarabi Mincho", serif;
   font-weight: 400;
   font-style: normal;
+}
+main {
+  flex: 1;
 }
 
 .container {
@@ -202,7 +208,8 @@ h1 {
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
-h2, h3 {
+h2,
+h3 {
   font-family: "Bangers", sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
