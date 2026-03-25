@@ -52,11 +52,11 @@ if (count($articles) > 0) {
                 <a href="actualite.php?id=<?= $firstArticle['id'] ?>" class="button btn btn-secondary">Lire plus</a>
             </div>
 
-            <div class="col-12 col-md-6 d-flex flex-column">
+            <div class="col-12 col-md-6 right-column">
                 <?php foreach ($articles as $key => $article): ?>
                     <?php if ($key < 2): ?>
-                        <div class="article-small mb-4">
-                            <img src="assets/uploads/articles/<?= htmlspecialchars($article['image']) ?>" alt="<?= htmlspecialchars($article['title']) ?>" class="img-fluid">
+                        <div class="article-small">
+                            <img src="<?= getArticleImage($article['image']) ?>" alt="<?= htmlspecialchars($article['title']) ?>" class="img-fluid">
                             <h3><?= htmlspecialchars($article['title']) ?></h3>
                             <p><?= htmlspecialchars(substr($article['content'], 0, 100)) ?>...</p>
                             <a href="actualite.php?id=<?= $article['id'] ?>" class="button btn btn-secondary">Lire plus</a>
