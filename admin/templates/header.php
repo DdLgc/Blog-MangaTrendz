@@ -37,14 +37,14 @@ adminOnly();
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
                     <a href="#" class="nav-link active" aria-current="page">
-                    <i class="bi-speedometer2 bi pe-none me-2"></i>
+                        <i class="bi-speedometer2 bi pe-none me-2"></i>
                         Home
                     </a>
                 </li>
                 <li>
                     <a href="#" class="nav-link text-white">
                         <i class="bi-table bi pe-none me-2"></i>
-                            Articles
+                        Articles
                     </a>
                 </li>
             </ul>
@@ -68,3 +68,9 @@ adminOnly();
         </div>
 
         <main class="d-flex flex-column px-4">
+            <?php if (isset($_SESSION['flash'])): ?>
+                <div class="alert alert-success text-center">
+                    <?= htmlspecialchars($_SESSION['flash']); ?>
+                </div>
+                <?php unset($_SESSION['flash']); ?>
+            <?php endif; ?>

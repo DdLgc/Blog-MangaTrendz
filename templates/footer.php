@@ -15,8 +15,8 @@
         </ul>
 
         <div class="d-flex justify-content-center footer-logo-container">
-            <a href="/">
-                <img src="assets/img/logo.jpg" alt="Logo MangaTrendz" class="footer-logo logo blinking-logo" width="150">
+            <a href="../index.php">
+                <img src="<?= _BASE_URL_; ?>assets/img/logo.jpg" alt="Logo MangaTrendz" class="footer-logo logo blinking-logo" width="150">
             </a>
         </div>
 

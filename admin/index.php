@@ -40,9 +40,9 @@ require_once __DIR__ . '/../templates/header.php';
 
 <div class="container my-4">
     <div class="d-flex flex-wrap gap-3 justify-content-center">
-        <a href="<?= _BASE_URL_; ?>admin/crud/create.php" class="btn btn-primary">Créer un article</a>
-        <a href="<?= _BASE_URL_; ?>admin/crud/edit.php" class="btn btn-secondary">Modifier un article</a>
-        <a href="<?= _BASE_URL_; ?>admin/crud/delete.php" class="btn btn-danger">Supprimer un article</a>
+        <a href="<?= _BASE_URL_; ?>admin/crud/create.php" class="button btn btn-primary">Créer un article</a>
+        <a href="<?= _BASE_URL_; ?>admin/crud/edit.php" class="button btn btn-secondary">Modifier un article</a>
+        <a href="<?= _BASE_URL_; ?>admin/crud/delete.php" class="button btn btn-danger">Supprimer un article</a>
     </div>
 </div>
 
