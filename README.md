@@ -107,104 +107,104 @@ Mot de passe : test
 
 
 MangaTrendz/
-📦admin
- ┣ 📂crud
- ┃ ┣ 📜create.php
- ┃ ┣ 📜delete.php
- ┃ ┣ 📜edit.php
- ┃ ┗ 📜edit_article.php
- ┣ 📂templates
- ┃ ┣ 📜footer.php
- ┃ ┗ 📜header.php
- ┣ 📜articles.php
- ┣ 📜index.php
- ┗ 📜sessionAdmin.php
- 📦assets
- ┣ 📂img
- ┃ ┣ 📜default-article.jpg
- ┃ ┣ 📜hero.png
- ┃ ┣ 📜Logo.jpg
- ┃ ┣ 📜Logo_original.png
- ┃ ┣ 📜manga_trendz_with_pink_touches.webp
- ┃ ┗ 📜MixManga.jpg
- ┣ 📂uploads
- ┃ ┗ 📂articles
- ┃ ┃ ┣ 📜1-Luffy.jpeg
- ┃ ┃ ┣ 📜10-JJK.jpeg
- ┃ ┃ ┣ 📜10-JJK.jpg
- ┃ ┃ ┣ 📜11-DBS.jpg
- ┃ ┃ ┣ 📜12-Spy_x_family.jpg
- ┃ ┃ ┣ 📜14-TokyoR.jpeg
- ┃ ┃ ┣ 📜14-TokyoR.jpg
- ┃ ┃ ┣ 📜2-Kurosaki.jpg
- ┃ ┃ ┣ 📜3-Itachi.jpg
- ┃ ┃ ┣ 📜4-Kenshiro.jpg
- ┃ ┃ ┣ 📜5-one_piece.jpg
- ┃ ┃ ┣ 📜6-Demon_slayer.jpg
- ┃ ┃ ┣ 📜7-SNK.jpg
- ┃ ┃ ┣ 📜8-ChainsawMan.jpg
- ┃ ┃ ┣ 📜9-MHAvsMarvel.jpeg
- ┃ ┃ ┣ 📜9-MHAvsMarvel.jpg
- ┃ ┃ ┣ 📜aot.jpg
- ┃ ┃ ┣ 📜berserk.jpg
- ┃ ┃ ┣ 📜bluelock.jpg
- ┃ ┃ ┣ 📜bluespringride.jpg
- ┃ ┃ ┣ 📜chainsawman.jpg
- ┃ ┃ ┣ 📜deathnote.jpg
- ┃ ┃ ┣ 📜demonslayer-era.jpg
- ┃ ┃ ┣ 📜demonslayer.jpeg
- ┃ ┃ ┣ 📜demonslayer.jpg
- ┃ ┃ ┣ 📜eminence.jpg
- ┃ ┃ ┣ 📜fma.jpg
- ┃ ┃ ┣ 📜frieren.jpg
- ┃ ┃ ┣ 📜fruitsbasket.jpg
- ┃ ┃ ┣ 📜horimiya.jpg
- ┃ ┃ ┣ 📜jujutsu-era.jpg
- ┃ ┃ ┣ 📜jujutsu.jpg
- ┃ ┃ ┣ 📜marineford.jpg
- ┃ ┃ ┣ 📜mha.jpeg
- ┃ ┃ ┣ 📜mha.jpg
- ┃ ┃ ┣ 📜monster.jpg
- ┃ ┃ ┣ 📜mylovestory.jpg
- ┃ ┃ ┣ 📜nana.jpg
- ┃ ┃ ┣ 📜naru.webp
- ┃ ┃ ┣ 📜narut.jpg
- ┃ ┃ ┣ 📜naruto.jpg
- ┃ ┃ ┣ 📜OIP.DlZ4TeQ7A45SxD6pzrWu7AHaEo.jpg
- ┃ ┃ ┣ 📜onepiece.jpg
- ┃ ┃ ┣ 📜oshinoko.jpg
- ┃ ┃ ┣ 📜rezero.jpg
- ┃ ┃ ┣ 📜sao.jpg
- ┃ ┃ ┣ 📜slime.jpg
- ┃ ┃ ┣ 📜sololeveling.jpg
- ┃ ┃ ┣ 📜tokyoghoul.jpg
- ┃ ┃ ┣ 📜vinlandsaga.jpg
- ┃ ┃ ┣ 📜yourname.jpg
- ┃ ┃ ┗ 📜yourname.png
- ┗ 📜style.css
- 📦lib
- ┣ 📜article.php
- ┣ 📜config.php
- ┣ 📜menu.php
- ┣ 📜pdo.php
- ┣ 📜session.php
- ┣ 📜start_session.php
- ┗ 📜user.php
- 📦templates
- ┣ 📜article_part.php
- ┣ 📜footer.php
- ┗ 📜header.php
- 📦z-Documentation
- ┣ 📜Blog-Théorie.pdf
- ┗ 📜mangaTrendz.sql
- ┣ 📜404.php
- ┣ 📜a_propos.php
- ┣ 📜actualite.php
- ┣ 📜actualites.php
- ┣ 📜contact.php
- ┣ 📜index.php
- ┣ 📜legal_information.php
- ┣ 📜list_files.php
- ┣ 📜login.php
- ┣ 📜logout.php
- ┗ 📜pdc.php
+📦admin  
+ ┣ 📂crud  
+ ┃ ┣ 📜create.php  
+ ┃ ┣ 📜delete.php  
+ ┃ ┣ 📜edit.php  
+ ┃ ┗ 📜edit_article.php  
+ ┣ 📂templates  
+ ┃ ┣ 📜footer.php  
+ ┃ ┗ 📜header.php  
+ ┣ 📜articles.php  
+ ┣ 📜index.php  
+ ┗ 📜sessionAdmin.php  
+ 📦assets  
+ ┣ 📂img  
+ ┃ ┣ 📜default-article.jpg  
+ ┃ ┣ 📜hero.png  
+ ┃ ┣ 📜Logo.jpg  
+ ┃ ┣ 📜Logo_original.png  
+ ┃ ┣ 📜manga_trendz_with_pink_touches.webp  
+ ┃ ┗ 📜MixManga.jpg  
+ ┣ 📂uploads  
+ ┃ ┗ 📂articles  
+ ┃ ┃ ┣ 📜1-Luffy.jpeg  
+ ┃ ┃ ┣ 📜10-JJK.jpeg  
+ ┃ ┃ ┣ 📜10-JJK.jpg  
+ ┃ ┃ ┣ 📜11-DBS.jpg  
+ ┃ ┃ ┣ 📜12-Spy_x_family.jpg  
+ ┃ ┃ ┣ 📜14-TokyoR.jpeg  
+ ┃ ┃ ┣ 📜14-TokyoR.jpg  
+ ┃ ┃ ┣ 📜2-Kurosaki.jpg  
+ ┃ ┃ ┣ 📜3-Itachi.jpg  
+ ┃ ┃ ┣ 📜4-Kenshiro.jpg  
+ ┃ ┃ ┣ 📜5-one_piece.jpg  
+ ┃ ┃ ┣ 📜6-Demon_slayer.jpg  
+ ┃ ┃ ┣ 📜7-SNK.jpg  
+ ┃ ┃ ┣ 📜8-ChainsawMan.jpg  
+ ┃ ┃ ┣ 📜9-MHAvsMarvel.jpeg  
+ ┃ ┃ ┣ 📜9-MHAvsMarvel.jpg  
+ ┃ ┃ ┣ 📜aot.jpg  
+ ┃ ┃ ┣ 📜berserk.jpg  
+ ┃ ┃ ┣ 📜bluelock.jpg  
+ ┃ ┃ ┣ 📜bluespringride.jpg  
+ ┃ ┃ ┣ 📜chainsawman.jpg  
+ ┃ ┃ ┣ 📜deathnote.jpg  
+ ┃ ┃ ┣ 📜demonslayer-era.jpg  
+ ┃ ┃ ┣ 📜demonslayer.jpeg  
+ ┃ ┃ ┣ 📜demonslayer.jpg  
+ ┃ ┃ ┣ 📜eminence.jpg  
+ ┃ ┃ ┣ 📜fma.jpg  
+ ┃ ┃ ┣ 📜frieren.jpg  
+ ┃ ┃ ┣ 📜fruitsbasket.jpg  
+ ┃ ┃ ┣ 📜horimiya.jpg  
+ ┃ ┃ ┣ 📜jujutsu-era.jpg  
+ ┃ ┃ ┣ 📜jujutsu.jpg  
+ ┃ ┃ ┣ 📜marineford.jpg  
+ ┃ ┃ ┣ 📜mha.jpeg  
+ ┃ ┃ ┣ 📜mha.jpg  
+ ┃ ┃ ┣ 📜monster.jpg  
+ ┃ ┃ ┣ 📜mylovestory.jpg  
+ ┃ ┃ ┣ 📜nana.jpg  
+ ┃ ┃ ┣ 📜naru.webp  
+ ┃ ┃ ┣ 📜narut.jpg  
+ ┃ ┃ ┣ 📜naruto.jpg  
+ ┃ ┃ ┣ 📜OIP.DlZ4TeQ7A45SxD6pzrWu7AHaEo.jpg  
+ ┃ ┃ ┣ 📜onepiece.jpg  
+ ┃ ┃ ┣ 📜oshinoko.jpg  
+ ┃ ┃ ┣ 📜rezero.jpg  
+ ┃ ┃ ┣ 📜sao.jpg  
+ ┃ ┃ ┣ 📜slime.jpg  
+ ┃ ┃ ┣ 📜sololeveling.jpg  
+ ┃ ┃ ┣ 📜tokyoghoul.jpg  
+ ┃ ┃ ┣ 📜vinlandsaga.jpg  
+ ┃ ┃ ┣ 📜yourname.jpg  
+ ┃ ┃ ┗ 📜yourname.png  
+ ┗ 📜style.css  
+ 📦lib  
+ ┣ 📜article.php  
+ ┣ 📜config.php  
+ ┣ 📜menu.php  
+ ┣ 📜pdo.php  
+ ┣ 📜session.php  
+ ┣ 📜start_session.php  
+ ┗ 📜user.php  
+ 📦templates  
+ ┣ 📜article_part.php  
+ ┣ 📜footer.php  
+ ┗ 📜header.php  
+ 📦z-Documentation  
+ ┣ 📜Blog-Théorie.pdf  
+ ┗ 📜mangaTrendz.sql  
+ ┣ 📜404.php  
+ ┣ 📜a_propos.php  
+ ┣ 📜actualite.php  
+ ┣ 📜actualites.php  
+ ┣ 📜contact.php  
+ ┣ 📜index.php  
+ ┣ 📜legal_information.php  
+ ┣ 📜list_files.php  
+ ┣ 📜login.php  
+ ┣ 📜logout.php  
+ ┗ 📜pdc.php  
