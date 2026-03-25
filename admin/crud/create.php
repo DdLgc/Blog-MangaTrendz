@@ -160,12 +160,12 @@ require_once __DIR__ . '/../../templates/header.php';
 
             <div class="mb-4">
                 <label for="image" class="form-label">Image (optionnelle)</label>
-                <input type="file" name="image" id="image" class="form-control">
+                <input type="file" name="image" id="image" class="form-control" placeholder="default.jpg">
             </div>
 
             <div class="d-flex justify-content-center gap-3">
-                <button type="submit" class="btn btn-success">Créer l\'article</button>
-                <a href="<?= _BASE_URL_; ?>admin/index.php" class="btn btn-outline-light">Annuler</a>
+                <button type="submit" class="button btn btn-success">Créer l'article</button>
+                <a href="<?= _BASE_URL_; ?>admin/index.php" class="button btn btn-secondary">Annuler</a>
             </div>
         </form>
     <?php endif; ?>

@@ -46,9 +46,9 @@ if (count($articles) > 0) {
             $firstArticle = array_shift($articles);
         ?>
             <div class="col-12 col-md-6 featured-article">
-                <img src="assets/uploads/articles/<?= htmlspecialchars($firstArticle['image']) ?>" alt="<?= htmlspecialchars($firstArticle['title']) ?>" class="img-fluid">
+                <img src="<?= getArticleImage($firstArticle['image']) ?>" alt="<?= htmlspecialchars($firstArticle['title']) ?>" class="img-fluid">
                 <h2><?= htmlspecialchars($firstArticle['title']) ?></h2>
-                <p><?= htmlspecialchars(substr($firstArticle['content'], 0, 150)) ?>...</p>
+                <p><?= nl2br(htmlspecialchars($firstArticle['content'])) ?></p>
                 <a href="actualite.php?id=<?= $firstArticle['id'] ?>" class="button btn btn-secondary">Lire plus</a>
             </div>
 

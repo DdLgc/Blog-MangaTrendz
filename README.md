@@ -1,61 +1,210 @@
-# Blog PHP sur les Mangas - MangaTrendz  
+# MangaTrendz
+
+[![PHP](https://img.shields.io/badge/PHP-8%2B-blue)]()
+[![MySQL](https://img.shields.io/badge/MySQL-Database-orange)]()
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple)]()
+[![Status](https://img.shields.io/badge/Status-Active-success)]()
+
+---
+
 ## Description
-Bienvenue sur le projet MangaTrendz, un blog dédié aux passionnés de mangas. Ce blog PHP permet aux utilisateurs de découvrir et de discuter des dernières tendances dans le monde des mangas, des nouvelles sorties aux classiques indémodables.
+
+MangaTrendz est un site web d’actualités manga avec un backoffice administrateur permettant la gestion complète des articles (CRUD).
+
+Le projet repose sur une architecture PHP modulaire avec utilisation de PDO pour la base de données et Bootstrap pour l’interface utilisateur.
+Ce blog PHP permet aux utilisateurs de découvrir et de discuter des dernières tendances dans le monde des mangas, des nouvelles sorties aux classiques indémodables.
+
+--- 
 
 ## Fonctionnalités
-Articles sur les dernières sorties de mangas
-Critiques et analyses de séries populaires
-Forums de discussion pour les fans
-Sections dédiées par genres et auteurs
-Gestion de compte utilisateur  
 
-## Prérequis  
-Pour installer et exécuter ce blog, vous aurez besoin de :
-Un serveur web avec PHP (version x.x ou supérieure)
-MySQL (version x.x ou supérieure)
-Composer (pour la gestion des dépendances PHP)
+### Frontend
+- Affichage des articles
+- Page détail article
+- Pagination
+- Filtrage par catégorie
+- Page 404 personnalisée
+- SEO dynamique (meta title / description)
+- Interface responsive
 
-## Installation  
-Clonez le dépôt du projet sur votre serveur :
+### Admin
+- Authentification (user / admin)
+- Dashboard administrateur
+- Création d’articles
+- Modification d’articles
+- Suppression d’articles
+- Upload d’images
+- Image par défaut automatique
+- Suppression des images associées
+- Messages de confirmation (flash)
 
-bash
-Copy code
+---
+
+## Stack technique
+
+- PHP (procédural modulaire)
+- MySQL
+- PDO
+- Bootstrap 5
+- HTML / CSS / JavaScript
+
+---
+
+## Installation
+
+### Prérequis
+
+- PHP >= 8
+- MySQL
+- WAMP / XAMPP recommandé
+
+---
+
+### Étapes
+
+#### 1. Cloner le projet
+
+```bash
+git clone https://github.com/ton-repo/MangaTrendz.git
 ```
-git clone [url-du-dépôt]
+
+#### 2. Placer le projet
+
 ```
-Naviguez dans le dossier du projet et installez les dépendances avec Composer :
-
-bash
-Copy code
+C:\wamp64\www\MangaTrendz
 ```
-cd MangaTrendz
+
+#### 3. Creér une BDD / Importation
+
+Ouvrir phpMyAdmin et créer la base de données
+Ou importer la BDD existante a partir du fichier .sql se trouvant dans :
 ```
-composer install
-Créez une base de données MySQL pour le blog.
+z-Documentation
+```
 
-Copiez le fichier config.example.php en config.php et ajustez les paramètres de connexion à la base de données.
+#### 4. Configurer la connexion 
 
-Importez le fichier mangatrendz.sql dans votre base de données pour initialiser la structure.
-
-<!-- ## Utilisation  
-Après l'installation, accédez au blog via votre navigateur web en navigant vers l'URL de votre serveur.
-
-
-## Fonctionnalités
--Dashboard Admin 
--Ajout/suppress Article Admin dash
+Configurer la connexion à l'aide du fichier config.php se trouvant dans : 
+```
+lib/config.php
+```
 
 
-## Amélioratoins
--Ajout de commentaire sur les articles !
+#### 5. Lancer le serveur Apache/MySQL
+
+Al'aide de WAMP/XAMPP lancer Apache et MySQL 
+
+#### 6. Acceder au site 
+
+```
+http://loclahost/MangaTrendz
+```
+
+#### 7 . Acces administrateur 
+
+Email de connexion : admin@test.com
+Mot de passe : test
 
 
-### secu 
-
-required dans HTML pas suffisant necessité de testé avc PHP au cas ou Js soit désactivé
-HTTPOnly dans les config menu 
-Domain 
-et le truc pour regenerate_id
-SESSION 
-
-## Licence   -->
+MangaTrendz/
+📦admin
+ ┣ 📂crud
+ ┃ ┣ 📜create.php
+ ┃ ┣ 📜delete.php
+ ┃ ┣ 📜edit.php
+ ┃ ┗ 📜edit_article.php
+ ┣ 📂templates
+ ┃ ┣ 📜footer.php
+ ┃ ┗ 📜header.php
+ ┣ 📜articles.php
+ ┣ 📜index.php
+ ┗ 📜sessionAdmin.php
+ 📦assets
+ ┣ 📂img
+ ┃ ┣ 📜default-article.jpg
+ ┃ ┣ 📜hero.png
+ ┃ ┣ 📜Logo.jpg
+ ┃ ┣ 📜Logo_original.png
+ ┃ ┣ 📜manga_trendz_with_pink_touches.webp
+ ┃ ┗ 📜MixManga.jpg
+ ┣ 📂uploads
+ ┃ ┗ 📂articles
+ ┃ ┃ ┣ 📜1-Luffy.jpeg
+ ┃ ┃ ┣ 📜10-JJK.jpeg
+ ┃ ┃ ┣ 📜10-JJK.jpg
+ ┃ ┃ ┣ 📜11-DBS.jpg
+ ┃ ┃ ┣ 📜12-Spy_x_family.jpg
+ ┃ ┃ ┣ 📜14-TokyoR.jpeg
+ ┃ ┃ ┣ 📜14-TokyoR.jpg
+ ┃ ┃ ┣ 📜2-Kurosaki.jpg
+ ┃ ┃ ┣ 📜3-Itachi.jpg
+ ┃ ┃ ┣ 📜4-Kenshiro.jpg
+ ┃ ┃ ┣ 📜5-one_piece.jpg
+ ┃ ┃ ┣ 📜6-Demon_slayer.jpg
+ ┃ ┃ ┣ 📜7-SNK.jpg
+ ┃ ┃ ┣ 📜8-ChainsawMan.jpg
+ ┃ ┃ ┣ 📜9-MHAvsMarvel.jpeg
+ ┃ ┃ ┣ 📜9-MHAvsMarvel.jpg
+ ┃ ┃ ┣ 📜aot.jpg
+ ┃ ┃ ┣ 📜berserk.jpg
+ ┃ ┃ ┣ 📜bluelock.jpg
+ ┃ ┃ ┣ 📜bluespringride.jpg
+ ┃ ┃ ┣ 📜chainsawman.jpg
+ ┃ ┃ ┣ 📜deathnote.jpg
+ ┃ ┃ ┣ 📜demonslayer-era.jpg
+ ┃ ┃ ┣ 📜demonslayer.jpeg
+ ┃ ┃ ┣ 📜demonslayer.jpg
+ ┃ ┃ ┣ 📜eminence.jpg
+ ┃ ┃ ┣ 📜fma.jpg
+ ┃ ┃ ┣ 📜frieren.jpg
+ ┃ ┃ ┣ 📜fruitsbasket.jpg
+ ┃ ┃ ┣ 📜horimiya.jpg
+ ┃ ┃ ┣ 📜jujutsu-era.jpg
+ ┃ ┃ ┣ 📜jujutsu.jpg
+ ┃ ┃ ┣ 📜marineford.jpg
+ ┃ ┃ ┣ 📜mha.jpeg
+ ┃ ┃ ┣ 📜mha.jpg
+ ┃ ┃ ┣ 📜monster.jpg
+ ┃ ┃ ┣ 📜mylovestory.jpg
+ ┃ ┃ ┣ 📜nana.jpg
+ ┃ ┃ ┣ 📜naru.webp
+ ┃ ┃ ┣ 📜narut.jpg
+ ┃ ┃ ┣ 📜naruto.jpg
+ ┃ ┃ ┣ 📜OIP.DlZ4TeQ7A45SxD6pzrWu7AHaEo.jpg
+ ┃ ┃ ┣ 📜onepiece.jpg
+ ┃ ┃ ┣ 📜oshinoko.jpg
+ ┃ ┃ ┣ 📜rezero.jpg
+ ┃ ┃ ┣ 📜sao.jpg
+ ┃ ┃ ┣ 📜slime.jpg
+ ┃ ┃ ┣ 📜sololeveling.jpg
+ ┃ ┃ ┣ 📜tokyoghoul.jpg
+ ┃ ┃ ┣ 📜vinlandsaga.jpg
+ ┃ ┃ ┣ 📜yourname.jpg
+ ┃ ┃ ┗ 📜yourname.png
+ ┗ 📜style.css
+ 📦lib
+ ┣ 📜article.php
+ ┣ 📜config.php
+ ┣ 📜menu.php
+ ┣ 📜pdo.php
+ ┣ 📜session.php
+ ┣ 📜start_session.php
+ ┗ 📜user.php
+ 📦templates
+ ┣ 📜article_part.php
+ ┣ 📜footer.php
+ ┗ 📜header.php
+ 📦z-Documentation
+ ┣ 📜Blog-Théorie.pdf
+ ┗ 📜mangaTrendz.sql
+ ┣ 📜404.php
+ ┣ 📜a_propos.php
+ ┣ 📜actualite.php
+ ┣ 📜actualites.php
+ ┣ 📜contact.php
+ ┣ 📜index.php
+ ┣ 📜legal_information.php
+ ┣ 📜list_files.php
+ ┣ 📜login.php
+ ┣ 📜logout.php
+ ┗ 📜pdc.php
