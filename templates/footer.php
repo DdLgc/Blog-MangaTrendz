@@ -1,6 +1,6 @@
 </main>
 
-<footer class="pt-2 mt-4 border-top">
+<footer class="pt-2 border-top mt-auto">
     <div class="container d-flex justify-content-between align-items-center">
         <ul class="nav flex-column text-start">
             <li class="nav-item">
