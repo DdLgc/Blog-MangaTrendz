@@ -139,7 +139,8 @@ main {
    TYPO
  */
 
-h1 {
+h1,
+.page-title {
   font-family: "Bangers", sans-serif;
   font-weight: 600;
   font-size: 3rem;
@@ -152,7 +153,9 @@ h1 {
   padding: 10px;
   background: linear-gradient(90deg, #ff4081, #40c4ff);
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #ff4081;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 

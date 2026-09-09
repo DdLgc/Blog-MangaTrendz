@@ -322,7 +322,31 @@ Ce projet met particulièrement en évidence :
 - utilisation professionnelle de Git et GitHub
 
 ---
+## Captures d'écran
 
+### Accueil
+
+Vue principale de **MangaTrendz**, présentant les dernières actualités et l'identité visuelle du site.
+
+![Accueil de MangaTrendz](assets/readme/mangaTrendz-Accueil.png)
+
+### Actualités
+
+Consultation des articles avec *filtrage par catégorie* et système de *pagination*.
+
+![Page des actualités](assets/readme/mangaTrendz-Actualites_filtre.png)
+
+### Administration
+
+Interface d'administration permettant la gestion dynamique du contenu et des articles.
+
+![Dashboard administrateur](assets/readme/mangaTrendz-Edit_200.png)
+
+### Authentification
+
+Vérification de la connexion administrateur via une requête HTTP `POST` réussie dans les outils de développement du navigateur.
+
+![Authentification administrateur](assets/readme/mangaTrendz-login_200.png)
 ## Évolutions possibles
 
 Le projet pourrait encore évoluer avec :

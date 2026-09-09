@@ -36,7 +36,7 @@ $categories = $pdo->query("SELECT id, name FROM categories ORDER BY name ASC")->
 require_once __DIR__ . "/templates/header.php";
 ?>
 
-<h1 class="text-center my-4">Actualités</h1>
+<h1 class="page-title">Actualités</h1>
 
 <form method="get" class="d-flex justify-content-center align-items-center flex-wrap gap-2 my-4">
     <select name="category" class="form-select w-auto">
