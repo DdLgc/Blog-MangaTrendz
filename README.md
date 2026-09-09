@@ -5,6 +5,7 @@
 [![PDO](https://img.shields.io/badge/PDO-Database_Access-777BB4)]()
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap&logoColor=white)]()
 [![Status](https://img.shields.io/badge/Status-Completed-success)]()
+[![Version](https://img.shields.io/badge/Version-v1.0.0-red)]()
 
 ## Description
 
