@@ -58,12 +58,12 @@ if (!isset($mainMenu[$currentPage])) {
 
     <div class="col-12 col-md-3 text-center text-md-end mt-3 mt-md-0">
       <?php if (isset($_SESSION["user"])): ?>
-        <a href="<?= _BASE_URL_; ?>logout.php" class="btn btn-primary">Déconnexion</a>
+        <a href="<?= _BASE_URL_; ?>logout.php" class="button btn btn-primary">Déconnexion</a>
       <?php else: ?>
-        <a href="<?= _BASE_URL_; ?>login.php" class="btn btn-outline-primary">Connexion</a>
+        <a href="<?= _BASE_URL_; ?>login.php" class="button btn btn-outline-primary">Connexion</a>
       <?php endif; ?>
     </div>
 
   </header>
 
-  <main class="container flex-grow-1"
+  <main class="container flex-grow-1">
